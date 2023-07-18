@@ -1,9 +1,9 @@
 terraform {
   backend "s3" {
-    bucket         = "<your_bucket_name>"
+    bucket         = "venujenkins11"
     key            = "terraform.tfstate"
-    region         = "<your_aws_region>"
-    dynamodb_table = "<your_dynamo_dbtable_name>"
+    region         = "ap-south-1"
+    dynamodb_table = "venu11"
   }
 }
 resource "aws_instance" "public_instance" {
