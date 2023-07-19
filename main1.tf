@@ -1,7 +1,10 @@
-terraform {
-  backend "s3" {
-    bucket         = "venujenkins11"
-    key            = "terraform.tfstate"
-    region         = "ap-south-1"
+resource "aws_s3_bucket" "venujenkins11" {
+  bucket_prefix = var.bucket_prefix
+  acl = var.acl
+  
+   versioning {
+    enabled = var.versioning
   }
+  
+  tags = var.tags
 }
