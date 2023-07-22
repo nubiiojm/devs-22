@@ -6,3 +6,11 @@ resource "aws_instance" "public_instance" {
    Name = var.name_tag,
  }
 }
+
+terraform {
+  backend "s3" {
+    bucket = "venus3bucket1111"
+    key    = "terraform.tfstate"
+    region = "ap-south-1"
+  }
+}
